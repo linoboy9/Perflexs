@@ -3,144 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perflexs - Innovación y Tecnología</title>
+    <title>Perflexs | Soluciones y Negocios</title>
     <style>
-        /* --- DISEÑO GENERAL --- */
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333333;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111111;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555555;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #000000;
+        }
+
+        #reloj-nav {
+            font-size: 0.9rem;
+            color: #444;
+            font-weight: 600;
+            background: #f1f3f5;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- SECCIÓN PRINCIPAL (HERO) --- */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 120px 20px;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            /* Fondo degradado moderno en tonos oscuros */
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            background-size: 300% 300%;
-            animation: movimientoFondo 15s ease infinite;
+            min-height: 60vh;
         }
 
-        /* Animación suave del fondo */
-        @keyframes movimientoFondo {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
+        .hero-content {
+            max-width: 800px;
         }
 
-        .contenedor {
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para leer el texto */
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 600px;
-            margin: 20px;
-            backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* --- TEXTOS --- */
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 800;
-            background: linear-gradient(90deg, #ffffff, #ffcc00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
-        p.subtitulo {
-            font-size: 1.5rem;
-            margin-top: 0;
-            color: #f0f0f0;
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
             font-weight: 300;
         }
 
-        p.descripcion {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            color: #e0e0e0;
-        }
-
-        /* --- BOTONES --- */
-        .botones-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .boton {
-            padding: 12px 30px;
-            font-size: 1rem;
-            font-weight: bold;
+        .btn-primary {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #111111;
+            padding: 14px 35px;
+            font-size: 0.95rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 50px; /* Botón redondeado */
-            transition: all 0.3s ease;
+            border-radius: 4px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: background-color 0.2s, transform 0.2s;
         }
 
-        /* Botón principal (CTA) */
-        .boton-principal {
-            background-color: #ffcc00;
+        .btn-primary:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+
+        /* --- SECCIÓN DE PILARES --- */
+        .section-features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        .section-features h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #111111;
+        }
+
+        .section-features p.subtitle {
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 6px;
+            border: 1px solid #e5e5e5;
+            text-align: left;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* --- SECCIÓN DE CONTACTO --- */
+        .contact-section {
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .contact-section p {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
             color: #333;
         }
-        .boton-principal:hover {
-            background-color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
         }
 
-        /* Botón secundario */
-        .boton-secundario {
-            background-color: transparent;
-            border: 2px solid #fff;
-            color: #fff;
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
         }
-        .boton-secundario:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
+
+        .form-submit {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            padding: 14px 35px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .form-submit:hover {
+            background-color: #333;
         }
 
         /* --- PIE DE PÁGINA --- */
-        footer {
-            margin-top: auto; /* Empuja el footer al fondo */
-            padding: 20px;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.5);
-        }
-        footer a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-        }
+        <footer>
+            <p>&copy; 2026 Perflexs. Todos los derechos reservados.</p>
+        </footer>
     </style>
 </head>
 <body>
 
-    <div class="contenedor">
-        <h1>Perflexs</h1>
-        <p class="subtitulo">Innovación y Tecnología a tu alcance</p>
-        
-        <p class="descripcion">
-            Bienvenido a la nueva presencia digital de Perflexs. Estamos trabajando para ofrecerte una experiencia única. Contáctanos para más información sobre nuestros servicios.
-        </p>
-
-        <div class="botones-container">
-            <a href="mailto:contacto@perflexs.com" class="boton boton-principal">Contáctanos</a>
-            <a href="#" class="boton boton-secundario">Más info (Pronto)</a>
+    <!-- Barra de Navegación -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Perflexs</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div id="reloj-nav">Cargando...</div>
+            </div>
         </div>
-    </div>
+    </header>
 
+    <!-- Sección Principal / Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Excelencia y Visión Global</h1>
+            <p>Construyendo el futuro de nuestros proyectos con seriedad, estrategia y profesionalismo.</p>
+            <a href="#contacto" class="btn-primary">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Sección de Pilares -->
+    <section class="section-features" id="servicios">
+        <h2>Nuestros Pilares</h2>
+        <p class="subtitle">Estrategias sólidas diseñadas para el crecimiento empresarial.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Estrategia</h3>
+                <p>Enfoque analítico y directo al cumplimiento de objetivos corporativos de alto nivel.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Innovación</h3>
+                <p>Implementación de herramientas modernas para optimizar procesos y operaciones.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Compromiso</h3>
+                <p>Garantía de seriedad, cumplimiento y estándares profesionales en cada etapa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-container">
+            <h2>Contacto Directo</h2>
+            <p>Complete el formulario para enviar un mensaje corporativo.</p>
+            
+            <form onsubmit="enviarCorreoDirecto(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" required placeholder="Su nombre completo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required placeholder="correo@ejemplo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" required placeholder="Escriba su mensaje aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
     <footer>
-        &copy; 2023 Perflexs - Todos los derechos reservados | <a href="#">Aviso Legal</a>
+        <p>&copy; 2026 Perflexs. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script del Reloj y del Formulario Directo -->
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            document.getElementById('reloj-nav').innerText = ahora.toLocaleTimeString();
+        }
+        setInterval(actualizarReloj, 1000);
+        actualizarReloj();
+
+        function enviarCorreoDirecto(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            const asunto = encodeURIComponent("Mensaje desde Perflexs.com de: " + nombre);
+            const cuerpo = encodeURIComponent("Nombre: " + nombre + "\nCorreo: " + email + "\n\nMensaje:\n" + mensaje);
+
+            window.location.href = `mailto:contacto@perflexs.com?subject=${asunto}&body=${cuerpo}`;
+        }
+    </script>
 
 </body>
 </html>
