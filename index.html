@@ -3,36 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perflexs</title>
+    <title>Perflexs - Innovación y Tecnología</title>
     <style>
+        /* --- DISEÑO GENERAL --- */
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             text-align: center;
-            background-color: #f4f4f9;
-            padding-top: 50px;
+            /* Fondo degradado moderno en tonos oscuros */
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 300% 300%;
+            animation: movimientoFondo 15s ease infinite;
         }
-        h1 { color: #333; }
-        #reloj {
-            font-size: 3rem;
+
+        /* Animación suave del fondo */
+        @keyframes movimientoFondo {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .contenedor {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para leer el texto */
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 20px;
+            backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- TEXTOS --- */
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ffffff, #ffcc00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitulo {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: #f0f0f0;
+            font-weight: 300;
+        }
+
+        p.descripcion {
+            font-size: 1.1rem;
+            line-height: 1.6;
             margin-top: 20px;
-            color: #007bff;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        /* --- BOTONES --- */
+        .botones-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .boton {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px; /* Botón redondeado */
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Botón principal (CTA) */
+        .boton-principal {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        .boton-principal:hover {
+            background-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Botón secundario */
+        .boton-secundario {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        .boton-secundario:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            margin-top: auto; /* Empuja el footer al fondo */
+            padding: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-    <h1>Perflexs</h1>
-    <p>Bienvenido a mi espacio personal.</p>
-    
-    <div id="reloj">Cargando hora...</div>
+    <div class="contenedor">
+        <h1>Perflexs</h1>
+        <p class="subtitulo">Innovación y Tecnología a tu alcance</p>
+        
+        <p class="descripcion">
+            Bienvenido a la nueva presencia digital de Perflexs. Estamos trabajando para ofrecerte una experiencia única. Contáctanos para más información sobre nuestros servicios.
+        </p>
 
-    <script>
-        function actualizarReloj() {
-            const ahora = new Date();
-            document.getElementById('reloj').innerText = ahora.toLocaleTimeString();
-        }
-        setInterval(actualizarReloj, 1000);
-        actualizarReloj();
-    </script>
+        <div class="botones-container">
+            <a href="mailto:contacto@perflexs.com" class="boton boton-principal">Contáctanos</a>
+            <a href="#" class="boton boton-secundario">Más info (Pronto)</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Perflexs - Todos los derechos reservados | <a href="#">Aviso Legal</a>
+    </footer>
+
 </body>
 </html>
