@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perflexs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding-top: 50px;
+        }
+        h1 { color: #333; }
+        #reloj {
+            font-size: 3rem;
+            margin-top: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Perflexs</h1>
+    <p>Bienvenido a mi espacio personal.</p>
+    
+    <div id="reloj">Cargando hora...</div>
+
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            document.getElementById('reloj').innerText = ahora.toLocaleTimeString();
+        }
+        setInterval(actualizarReloj, 1000);
+        actualizarReloj();
+    </script>
+</body>
+</html>
