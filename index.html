@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perflexs | Soluciones y Negocios</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',sans-serif;color:#222;background:#f8f9fa;line-height:1.6;scroll-behavior:smooth}
-        header{background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:1000}
-        .nav-container{max-width:1200px;margin:0 auto;padding:15px 30px;display:flex;justify-content:space-between;align-items:center}
-        .logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#111;text-decoration:none;letter-spacing:3px}
-        .nav-links{list-style:none;display:flex;gap:25px}
-        .nav-links a{text-decoration:none;color:#555;font-weight:500;font-size:0.9rem;transition:0.2s}
-        .nav-links a:hover{color:#111}
-        #reloj-nav{font-size:0.8rem;color:#888;background:#f1f3f5;padding:6px 12px;border-radius:20px;border:1px solid #e0e0e0}
-        
-        .hero{
-          background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?auto=format&fit=crop&w=1920&q=80');
-          background-size:cover;
-          background-position:center 30%;
-          color:#fff;
-          padding:170px 20px;
-          text-align:center;
-          min-height:85vh;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-        }
-        .hero h1{font-family:'Playfair Display',serif;font-size:3.8rem;line-height:1.1;margin-bottom:20px;text-shadow:0 2px 20px rgba(0,0,0,0.5)}
-        .hero h1 span{color:#FFD700}
-        .hero p{color:#fff;max-width:550px;margin:0 auto 40px;font-weight:400;font-size:1.15rem;text-shadow:0 1px 10px rgba(0,0,0,0.8)}
-        .btn-primary{display:inline-block;background:#fff;color:#111;padding:16px 45px;font-size:0.8rem;letter-spacing:3px;text-decoration:none;text-transform:uppercase;transition:0.3s;font-weight:700}
-        .btn-primary:hover{background:#FFD700;color:#000}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perflexs</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#fff}
+header{display:flex;justify-content:space-between;padding:15px 30px;background:#fff;border-bottom:1px solid #eee}
+.logo{font-family:'Playfair Display';font-weight:700;letter-spacing:3px;text-decoration:none;color:#000}
+.hero{
+  height:85vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?w=1920&q=80');
+  background-size:cover;
+  background-position:center;
+  display:flex;align-items:center;justify-content:center;text-align:center;color:white;
+}
+.hero h1{font-family:'Playfair Display';font-size:60px;margin:0;line-height:1}
+.hero p{margin:20px 0 30px;color:#eee}
+.btn{background:white;color:black;padding:15px 35px;text-decoration:none;font-size:12px;letter-spacing:2px;font-weight:700}
+.features{max-width:1100px;margin:60px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 20px}
+.card{border:1px solid #eee;padding:30px}
+footer{background:black;color:#666;text-align:center;padding:25px;font-size:12px;margin-top:60px}
+</style>
+</head>
+<body>
+<header>
+<a href="#" class="logo">PERFLEXS</a>
+<div id="reloj" style="font-size:12px;background:#f2f2f2;padding:5px 10px;border-radius:15px"></div>
+</header>
 
-        .section-features{max-width:1200px;margin:90px auto;padding:0 30px;text-align:center}
-        .section-features h2{font-family:'Playfair Display',serif;font-size:2.4rem;margin-bottom:10px}
-        .section-features p.subtitle{color:#999;margin-bottom:60px;font-weight:300}
-        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#eee;border:1px solid #eee}
-        .feature-card{background:#fff;padding:50px 35px;text-align:left}
-        .feature-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:15px}
-        .feature-card p{color:#777;font-size:0.92rem;line-height:1.8;font-weight:300}
+<div class="hero">
+<div>
+<h1>Excelencia y<br>Visión Global</h1>
+<p>New York • Estrategia • Negocios Internacionales</p>
+<a href="#contacto" class="btn">CONTÁCTANOS</a>
+</div>
+</div>
 
-        .contact-section{background:#111;padding:90px 20px;text-align:center}
-        .contact-container{max-width:600px;margin:0 auto}
-        .contact-section h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;margin-bottom:10px}
-        .contact-section p{color:#666;margin-bottom:40px;font
+<div class="features">
+<div class="card"><h3>Estrategia</h3><p>Objetivos corporativos de alto nivel.</p></div>
+<div class="card"><h3>Innovación</h3><p>Herramientas modernas para optimizar.</p></div>
+<div class="card"><h3>Compromiso</h3><p>Seriedad y estándares profesionales.</p></div>
+</div>
+
+<div id="contacto" style="max-width:500px;margin:80px auto;padding:0 20px;text-align:center">
+<h2 style="font-family:'Playfair Display'">Contacto</h2>
+<input id="nombre" placeholder="Nombre" style="width:100%;padding:12px;margin:10px 0;border:1px solid #ccc">
+<input id="email" placeholder="Correo" style="width:100%;padding:12px;margin:10px 0;border:1px solid #ccc">
+<textarea id="mensaje" placeholder="Mensaje" style="width:100%;padding:12px;height:100px;border:1px solid #ccc"></textarea>
+<button onclick="enviar()" style="width:100%;padding:15px;background:black;color:white;border:none;margin-top:10px;letter-spacing:2px">ENVIAR</button>
+</div>
+
+<footer>© 2026 PERFLEXS</footer>
+
+<script>
+setInterval(()=>{document.getElementById('reloj').innerText=new Date().toLocaleTimeString()},1000);
+function enviar(){location.href=`mailto:contacto@perflexs.com?subject=Mensaje de ${nombre.value}&body=${mensaje.value} - ${email.value}`}
+</script>
+</body>
+</html>
