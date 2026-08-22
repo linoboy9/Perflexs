@@ -8,7 +8,7 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Inter',sans-serif;color:#222;background:#f8f9fa;line-height:1.6;scroll-behavior:smooth}
-        header{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:1000}
+        header{background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:1000}
         .nav-container{max-width:1200px;margin:0 auto;padding:15px 30px;display:flex;justify-content:space-between;align-items:center}
         .logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#111;text-decoration:none;letter-spacing:3px}
         .nav-links{list-style:none;display:flex;gap:25px}
@@ -17,9 +17,9 @@
         #reloj-nav{font-size:0.8rem;color:#888;background:#f1f3f5;padding:6px 12px;border-radius:20px;border:1px solid #e0e0e0}
         
         .hero{
-          background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?auto=format&fit=crop&w=1920&q=80');
+          background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?auto=format&fit=crop&w=1920&q=80');
           background-size:cover;
-          background-position:center;
+          background-position:center 30%;
           color:#fff;
           padding:170px 20px;
           text-align:center;
@@ -28,11 +28,11 @@
           align-items:center;
           justify-content:center;
         }
-        .hero h1{font-family:'Playfair Display',serif;font-size:3.8rem;line-height:1.1;margin-bottom:20px}
-        .hero h1 span{color:#D4AF37}
-        .hero p{color:#ccc;max-width:550px;margin:0 auto 40px;font-weight:300;font-size:1.15rem}
-        .btn-primary{display:inline-block;border:1px solid #D4AF37;color:#D4AF37;padding:16px 45px;font-size:0.8rem;letter-spacing:3px;text-decoration:none;text-transform:uppercase;transition:0.3s}
-        .btn-primary:hover{background:#D4AF37;color:#000}
+        .hero h1{font-family:'Playfair Display',serif;font-size:3.8rem;line-height:1.1;margin-bottom:20px;text-shadow:0 2px 20px rgba(0,0,0,0.5)}
+        .hero h1 span{color:#FFD700}
+        .hero p{color:#fff;max-width:550px;margin:0 auto 40px;font-weight:400;font-size:1.15rem;text-shadow:0 1px 10px rgba(0,0,0,0.8)}
+        .btn-primary{display:inline-block;background:#fff;color:#111;padding:16px 45px;font-size:0.8rem;letter-spacing:3px;text-decoration:none;text-transform:uppercase;transition:0.3s;font-weight:700}
+        .btn-primary:hover{background:#FFD700;color:#000}
 
         .section-features{max-width:1200px;margin:90px auto;padding:0 30px;text-align:center}
         .section-features h2{font-family:'Playfair Display',serif;font-size:2.4rem;margin-bottom:10px}
@@ -45,67 +45,4 @@
         .contact-section{background:#111;padding:90px 20px;text-align:center}
         .contact-container{max-width:600px;margin:0 auto}
         .contact-section h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;margin-bottom:10px}
-        .contact-section p{color:#666;margin-bottom:40px;font-weight:300}
-        .form-group{margin-bottom:20px;text-align:left}
-        .form-group label{font-size:0.7rem;color:#666;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;display:block}
-        .form-group input,.form-group textarea{width:100%;padding:14px;background:#161616;border:1px solid #222;color:#fff;font-family:inherit}
-        .form-group input:focus,.form-group textarea:focus{outline:none;border-color:#D4AF37}
-        .form-submit{background:#D4AF37;color:#000;border:none;padding:16px;width:100%;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
-        .form-submit:hover{background:#fff}
-        footer{background:#080808;color:#444;padding:30px;text-align:center;font-size:0.75rem;letter-spacing:2px;border-top:1px solid #111}
-    </style>
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">PERFLEXS</a>
-            <div style="display:flex;gap:30px;align-items:center">
-                <ul class="nav-links">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                <div id="reloj-nav"></div>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div>
-            <h1>Excelencia y<br><span>Visión Global</span></h1>
-            <p>Construyendo el futuro con seriedad, estrategia y estándares internacionales.</p>
-            <a href="#contacto" class="btn-primary">Contáctanos</a>
-        </div>
-    </section>
-
-    <section class="section-features" id="servicios">
-        <h2>Nuestros Pilares</h2>
-        <p class="subtitle">Estrategias sólidas diseñadas para el crecimiento real.</p>
-        <div class="features-grid">
-            <div class="feature-card"><h3>Estrategia</h3><p>Enfoque analítico y directo al cumplimiento de objetivos corporativos de alto nivel.</p></div>
-            <div class="feature-card"><h3>Innovación</h3><p>Implementación de herramientas modernas para optimizar procesos y operaciones.</p></div>
-            <div class="feature-card"><h3>Compromiso</h3><p>Garantía de seriedad, cumplimiento y estándares profesionales en cada etapa.</p></div>
-        </div>
-    </section>
-
-    <section class="contact-section" id="contacto">
-        <div class="contact-container">
-            <h2>Contacto Directo</h2>
-            <p>Mensaje corporativo privado.</p>
-            <form onsubmit="enviarCorreoDirecto(event)">
-                <div class="form-group"><label>Nombre</label><input type="text" id="nombre" required></div>
-                <div class="form-group"><label>Correo</label><input type="email" id="email" required></div>
-                <div class="form-group"><label>Mensaje</label><textarea id="mensaje" required style="height:120px"></textarea></div>
-                <button type="submit" class="form-submit">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
-
-    <footer><p>&copy; 2026 PERFLEXS. TODOS LOS DERECHOS RESERVADOS.</p></footer>
-
-<script>
-function actualizarReloj(){document.getElementById('reloj-nav').innerText=new Date().toLocaleTimeString()} setInterval(actualizarReloj,1000); actualizarReloj();
-function enviarCorreoDirecto(e){e.preventDefault();const n=document.getElementById('nombre').value;const em=document.getElementById('email').value;const m=document.getElementById('mensaje').value;window.location.href=`mailto:contacto@perflexs.com?subject=${encodeURIComponent("Mensaje de: "+n)}&body=${encodeURIComponent("Nombre: "+n+"\nCorreo: "+em+"\n\n"+m)}`}
-</script>
-</body>
-</html>
+        .contact-section p{color:#666;margin-bottom:40px;font
